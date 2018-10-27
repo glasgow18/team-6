@@ -22,4 +22,19 @@ public class Server {
             e.printStackTrace();
         }
     }
+    public static void sendMsgWithReply(Session sender, String msg){
+        try{
+            if(!msg.equals(null)) {
+                // String reply = chatBot.poll(msg, sender);
+                String reply = "reply";     //ToDo: Poll Chat bot
+                JSONObject json = new JSONObject();
+                json.put("msg", msg);
+                json.put("reply", reply);
+                sender.getRemote().sendString(String.valueOf(json));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

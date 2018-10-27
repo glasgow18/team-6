@@ -19,8 +19,6 @@ public class ChatWebSocketHandler {
 
     @OnWebSocketMessage
     public void onMessage(Session user, String msg){
-        // String reply = chatBot.poll(msg);
-        String reply = "reply";     //ToDo: Poll Chat bot
-        Server.sendMessage(user, reply);
+        Server.sendMsgWithReply(user, msg);
     }
 }
