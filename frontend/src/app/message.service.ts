@@ -11,4 +11,6 @@ export class MessageService {
         this.messages.push(message);
         console.log(message.message);
     }
+
+
 }
