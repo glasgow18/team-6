@@ -1,10 +1,15 @@
-<div id="messages" *ngFor="let message of messageService.messages">
+<div class="messageRow" *ngFor="let message of messageService.messages">
 
-    <div *ngIf="message.type === 0" class="message serverMessage">
-        serverMessage
+    <div *ngIf="message.type === 0" class="serverMessage">
+        <div class="panda"><img src="../../assets/panda.png"></div>
+        <div class="message">
+            {{message.message}}
+        </div>
     </div>
-    <div *ngIf="message.type === 1" class="message userMessage">
-        {{message.message}}
+    <div *ngIf="message.type === 1" class="userMessage">
+        <div class="message">
+            {{message.message}}
+        </div>
     </div>
 
 </div>
