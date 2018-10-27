@@ -1,0 +1,41 @@
+@import "~src/variables";
+
+:host {
+
+  display: flex;
+  align-items: center;
+  border-top: solid 0.2rem $maincolor;
+  width: 100%;
+  height: 10%;
+
+  #input {
+    flex-grow: 2;
+    padding: 0.5rem 1rem;
+    height: calc(100% - 0.5*2rem);
+
+    textarea {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      outline: none;
+      border: none;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+  }
+
+  #button {
+    user-select: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    color: $maincolor;
+
+    i {
+      font-size: 2.5rem;
+    }
+
+  }
+
+
+}

@@ -1,0 +1,10 @@
+<div id="messages" *ngFor="let message of messageService.messages">
+
+    <div *ngIf="message.type === 0" class="message serverMessage">
+        serverMessage
+    </div>
+    <div *ngIf="message.type === 1" class="message userMessage">
+        {{message.message}}
+    </div>
+
+</div>
