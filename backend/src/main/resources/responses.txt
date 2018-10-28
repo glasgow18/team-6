@@ -1,0 +1,22 @@
+{
+   "greetings":[
+      "hi. give name",
+      "hey. give name"
+   ],
+   "nameRequest":[
+      "hmm, what to call you",
+      "what do i call you"
+   ],
+   "ageRequest":[
+      "how old are you, i need to figure out what services you can take, im not creepy",
+      "i was mde at like 5 am, and am 2 hours old. how old are you"
+   ],
+   "locationRequest":[
+      "where you from",
+      "where u live"
+   ],
+   "problemFind":[
+      "how are you",
+      "whats up"
+   ]
+}
