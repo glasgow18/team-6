@@ -45,7 +45,7 @@
         "connect",
         "discover",
         "counselling",
-        "groupCounselling"
+        "group"
       ]
     },
     {
@@ -71,7 +71,7 @@
         "depression",
         "connect",
         "discover",
-        "groupCounselling"
+        "group"
       ]
     },
     {
@@ -93,11 +93,7 @@
       "tags": [
         "anxiety",
         "depression",
-        "anxiety",
-        "depression",
         "connect",
-        "anxiety",
-        "discover",
         "discover",
         "depression",
         "counselling"
@@ -117,7 +113,7 @@
         "depression",
         "connect",
         "discover",
-        "groupCounselling"
+        "group"
       ]
     },
     {
@@ -133,7 +129,7 @@
         "discover",
         "connect",
         "counselling",
-        "groupCounselling"
+        "group"
       ]
     },
     {
@@ -232,7 +228,7 @@
         "depression",
         "connect",
         "discover",
-        "groupCounselling",
+        "group",
         "counselling"
       ]
     },
@@ -285,7 +281,7 @@
       "tags": [
         "depression",
         "discover",
-        "groupCounselling"
+        "group"
       ]
     },
     {
