@@ -2,13 +2,9 @@ import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.StringTokenizer;
-
-enum ServiceTags {
-    ANXIETY, DEPRESSION, CONNECT, DISCOVER,
-    COUNSELLING, GROUPCOUNSELLING, TRAUMA, SUICIDE
-}
 
 public class ChatBot {
     private Person person;
@@ -18,6 +14,7 @@ public class ChatBot {
     private String reply;
     private List<HealthService> relevantHS;
     private String name;
+    private List<String> keywords;
 
     public ChatBot(String name) {
         this.name = name;
@@ -25,8 +22,12 @@ public class ChatBot {
         relevantHS = new ArrayList<>();
         try {
             hsList = LoadServices.getHealthServices();
+            keywords = LoadServices.getTags();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+        for (String s : keywords) {
+            System.out.println(s);
         }
     }
 
@@ -35,15 +36,15 @@ public class ChatBot {
         int age;
         String location;
 
-        public List<ServiceTags> getTags() {
+        public List<String> getTags() {
             return tags;
         }
 
-        public void setTags(List<ServiceTags> tags) {
+        public void setTags(List<String> tags) {
             this.tags = tags;
         }
 
-        List<ServiceTags> tags;
+        List<String> tags;
 
         public String getName() {
             return name;
@@ -85,13 +86,13 @@ public class ChatBot {
                 //check crisis words
                 // call
                 // break down into tokens, synonym every one, check if they havve synoynms of target word
-                List<ServiceTags> tokens = getTokenKeywords(input);
+                List<String> tokens = getTokenKeywords(input);
                 if (tokens.size() > 0) {
                     person.setTags(tokens);
                     pointer++;
                 }
 
-                if (tokens.contains(ServiceTags.SUICIDE)) {
+                if (tokens.contains("suicide")) {
                     //call crisis
                 }
 
@@ -121,20 +122,27 @@ public class ChatBot {
     }
 
 
-//    public void checkProblem(String input) {
-//        String s = checkSynonym(input);
-//        if problem == crisis
+//    public void                              checkProblem(String input) {
+//        String         s = checkSynonym(input);
+//        if prob                                                                                    lem == crisis
 //            checkCrisis(type);
 
 //    }
 
-    private List<ServiceTags> getTokenKeywords(String input) {
-
+    private List<String> getTokenKeywords(String input) {
+        List<String> stemmed = Stemming.getStems(input);
+        ArrayList<String> synonyms = new ArrayList<>();
+        for (String s : stemmed) {
+            synonyms.addAll(Synonym.findSynonym(s));
+        }
+        if (synonyms.contains("sad")) {
+            System.out.println("u sad");
+        }
         // tokenise
         //call synonym for all of themm.
         // cross check to key words
 //call STEMMER
-        ArrayList<ServiceTags> tags = new ArrayList<>();
+        ArrayList<String> tags = new ArrayList<>();
         return tags;
     }
 
@@ -144,4 +152,8 @@ public class ChatBot {
         //what do with pointer
     }
 
+
+    public static void main(String[] args) {
+new ChatBot("a");
+    }
 }

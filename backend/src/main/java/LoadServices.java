@@ -41,4 +41,21 @@ public class LoadServices {
         }
         return hs;
     }
+
+    public static List<String> getTags() throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("services.txt");
+        JSONObject json = (JSONObject) parser.parse(fileReader);
+        JSONArray services = (JSONArray) json.get("services");
+        List<String> hs = new ArrayList<>();
+        ArrayList<String> tags = new ArrayList<>();
+        for (Object service : services) {
+            JSONObject serviceInstance = (JSONObject) parser.parse(service.toString());
+            for (Object tag : (JSONArray) serviceInstance.get("tags")) {
+                tags.add(tag.toString());
+            }
+
+        }
+        return tags;
+    }
 }
