@@ -3,23 +3,25 @@
 
     <h1>Chat Bot Admin Area</h1>
 
+    <div id="table">
 
-    <table class="services">
-        <tr>
-            <th>Name</th>
-            <th>Locations</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Tags</th>
-        </tr>
-        <tr *ngFor="let service of adminService.services; let id = index">
-            <td #nameTD contenteditable="true" (blur)="adminService.updateService(id, 'service', nameTD.innerHTML)">{{service.name}}</td>
-            <td #locationTD contenteditable="true" (blur)="adminService.updateService(id, 'location', locationTD.innerHTML)">{{service.locations}}</td>
-            <td #ageTD contenteditable="true" (blur)="adminService.updateService(id, 'age', ageTD.innerHTML)">{{service.age}}</td>
-            <td #genderTD contenteditable="true" (blur)="adminService.updateService(id, 'gender', genderTD.innerHTML)">{{service.gender}}</td>
-            <td #tagsTD contenteditable="true" (blur)="adminService.updateService(id, 'tags', tagsTD.innerHTML)">{{service.tags}}</td>
-        </tr>
-    </table>
+        <table class="services">
+            <tr>
+                <th>Name</th>
+                <th>Locations</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Tags</th>
+            </tr>
+            <tr *ngFor="let service of adminService.services; let id = index">
+                <td #nameTD contenteditable="true" (blur)="adminService.updateService(id, 'service', nameTD.innerHTML)">{{service.name}}</td>
+                <td #locationTD contenteditable="true" (blur)="adminService.updateService(id, 'location', locationTD.innerHTML)">{{service.locations}}</td>
+                <td #ageTD contenteditable="true" (blur)="adminService.updateService(id, 'age', ageTD.innerHTML)">{{service.age}}</td>
+                <td #genderTD contenteditable="true" (blur)="adminService.updateService(id, 'gender', genderTD.innerHTML)">{{service.gender}}</td>
+                <td #tagsTD contenteditable="true" (blur)="adminService.updateService(id, 'tags', tagsTD.innerHTML)">{{service.tags}}</td>
+            </tr>
+        </table>
+    </div>
 
     <!--<!-s="services">&ndash;&gt;-->
 
