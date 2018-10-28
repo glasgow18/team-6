@@ -77,9 +77,9 @@ public class ChatBot {
             case 0:
                 // break down around words like is, called, i'm, am
                 // check crisis words
-                String personName = input; //(currently nont broken)
+                String personName = input; //(does not filter surrounding words atm)
                 person.setName(input);
-                // increment pointer
+                pointer++;
                 break;
             case 1:
                 //check crisis words
@@ -87,13 +87,13 @@ public class ChatBot {
                 // break down into tokens, synonym every one, check if they havve synoynms of target word
                 List<ServiceTags> tokens = getTokenKeywords(input);
                 if (tokens.size() > 0) {
+                    person.setTags(tokens);
                     pointer++;
                 }
 
                 if (tokens.contains(ServiceTags.SUICIDE)) {
                     //call crisis
                 }
-//                checkProblem(input);
 
                 break;
             case 2:
@@ -121,12 +121,12 @@ public class ChatBot {
     }
 
 
-    public void checkProblem(String input) {
+//    public void checkProblem(String input) {
 //        String s = checkSynonym(input);
 //        if problem == crisis
 //            checkCrisis(type);
 
-    }
+//    }
 
     private List<ServiceTags> getTokenKeywords(String input) {
 
@@ -140,7 +140,8 @@ public class ChatBot {
 
 
     public void crisis() {
-        //
+        // message linking to samaritans.
+        //what do with pointer
     }
 
 }
