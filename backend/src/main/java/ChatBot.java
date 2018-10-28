@@ -184,6 +184,9 @@ public class ChatBot {
                 }
             }
             String out = "";
+            if(healthServiceList.isEmpty()){
+                return "No Local/Relevant services are available to you";
+            }
             for(HealthService hs: healthServiceList)
                 out = out.concat(hs.getServiceName() + "\n");
             return out;
@@ -195,7 +198,7 @@ public class ChatBot {
 
             return "Other Crisis Info";
         }
-        return "Sorry we can't help you with what you asked.";
+        return "Sorry we can't help you with what you asked, give us.";
     }
 
 
