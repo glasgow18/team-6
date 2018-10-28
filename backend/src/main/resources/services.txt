@@ -1,29 +1,367 @@
-{"services":[
-    {"service":"Befriending", "location":["Scottish Borders", "Edinburgh","Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better edinburgh face-to-face-support feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life make-changes-in-my-life midlothian rediscover-who-i-am scottish-borders spend-time-with-people-who-have-experienced-the-same-things support-from-someone-with-similar-experiences support-in-person"]},
-    {"service":"Community Navigator", "location":["South West Edinburgh","South East Edinburgh"], "age":"65-1000", "gender":"any", "tags":["mix deal-with-stress-better edinburgh feel-better-able-to-cope-with-life-and-my-feelings feel-more-connected-and-get-out-and-about find-out-what's-going-on-where-i-live get-well-and-stay-well information know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better support-in-person"]},
-    {"service":"Men's SHARE", "location":["Midlothian"], "age":"25-50", "gender":"male", "tags":["mix be-able-to-cope-with-the-affects-of-childhood-trauma deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me spend-time-with-people-who-have-experienced-the-same-things support-in-person support-with-others-(group) talk-to-someone-who-will-listen orange-bg"]},
-    {"service":"Art Psychotherapy", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better midlothian"]},
-    {"service":"ROWAN, Respect Our Woodland and Nature", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life make-changes-in-my-life midlothian rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me support-with-others-(group)"]},
-    {"service":"South West Edinburgh", "location":["South West Edinburgh"], "age":"0-1000", "gender":"any", "tags":["mix edinburgh"]},
-    {"service":"Support from Home", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian rediscover-who-i-am support-in-person talk-to-someone-who-will-listen"]},
-    {"service":"Equal Access, supporting people from minority and ethnic communities", "location":["East Lothian","Edinburgh","Midlothian"], "age":"16-1000", "gender":"any", "tags":["mix deal-with-stress-better east-lothian edinburgh face-to-face-support feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life make-changes-in-my-life midlothian rediscover-who-i-am spend-time-with-people-who-have-experienced-the-same-things support-from-someone-with-similar-experiences support-with-others-(group)"]},
-    {"service":"CLEAR, Community Lived Experience for Alcohol and Drugs Recovery", "location":["Midlothian"], "age":"18-1000", "gender":"any", "tags":["mix deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me spend-time-with-people-who-have-experienced-the-same-things support-from-someone-with-similar-experiences support-in-person support-with-others-(group) talk-to-someone-who-will-listen"]},
-    {"service":"Guided Self-Help", "location":["Edinburgh","Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better edinburgh feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-confident-and-better-about-myself feel-safe get-well-and-stay-well improve-the-relationships-i-have-with-others know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian support-in-person talk-to-someone-who-will-listen"]},
-    {"service":"South Queensferry Developments", "location":["South Queensferry"], "age":"0-1000", "gender":"any", "tags":["mix edinburgh"]},
-    {"service":"Counselling", "location":[""], "age":"0-1000", "gender":"any", "tags":["mix be-able-to-cope-with-the-affects-of-childhood-trauma deal-with-stress-better edinburgh feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-confident-and-better-about-myself feel-safe get-well-and-stay-well improve-the-relationships-i-have-with-others make-changes-in-my-life rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me support-in-person talk-to-someone-who-will-listen"]},
-    {"service":"Trauma Support Services", "location":[""], "age":"16-1000", "gender":"any", "tags":["mix be-able-to-cope-with-the-affects-of-childhood-trauma deal-with-stress-better edinburgh feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life rediscover-who-i-am spend-time-with-people-who-have-experienced-the-same-things support-in-person talk-to-someone-who-will-listen"]},
-    {"service":"Trauma Counselling Line Scotland", "location":[""], "age":"16-1000", "gender":"any", "tags":["mix be-able-to-cope-with-the-affects-of-childhood-trauma deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life make-changes-in-my-life other-areas rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me support-on-the-phone talk-to-someone-who-will-listen"]},
-    {"service":"Information Websites", "location":["East Lothian","Edinburgh","Midlothian","West Lothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better drop-in east-lothian edinburgh feel-better-able-to-cope-with-life-and-my-feelings feel-more-connected-and-get-out-and-about get-well-and-stay-well ind-out-what's-going-on-where-i-live information know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better midlothian support-in-person support-on-the-phone west-lothian"]},
-    {"service":"Day Service", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix deal-with-stress-better feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian spend-time-with-people-who-have-experienced-the-same-things support-with-others-(group) talk-to-someone-who-will-listen"]},
-    {"service":"Early Intervention and Crisis Response Service", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix feel-less-anxious feel-less-depressed feel-safe midlothian support-in-person support-on-the-phone talk-to-someone-who-will-listen"]},
-    {"service":"Out of Hours Service", "location":["Midlothian"], "age":"0-1000", "gender":"any", "tags":["mix midlothian"]},
-    {"service":"Wellbeing Access Point", "location":["Midlothian"], "age":"18-65", "gender":"any", "tags":["mix deal-with-stress-better drop-in feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-connected-and-get-out-and-about find-out-what's-going-on-where-i-live get-well-and-stay-well information know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life midlothian spend-time-thinking-about-what-is-important-to-me support-in-person talk-to-someone-who-will-listen"]},
-    {"service":"Anxiety and Depression Support Groups", "location":["East Lothian","Edinburgh","Midlothian","West Lothian"], "age":"16-1000", "gender":"any", "tags":["mix east-lothian edinburgh feel-less-depressed feel-more-connected-and-get-out-and-about midlothian support-with-others-(group) west-lothian"]},
-    {"service":"Wellbeing Gateway", "location":["South West Edinburgh"], "age":"18-64", "gender":"any", "tags":["mix deal-with-stress-better edinburgh face-to-face-support feel-better-able-to-cope-with-life-and-my-feelings feel-less-anxious feel-less-depressed feel-more-at-home-in-my-local-community feel-more-confident-and-better-about-myself feel-more-connected-and-get-out-and-about feel-safe find-out-what's-going-on-where-i-live get-well-and-stay-well have-more-friendships-in-my-life-and-get-to-know-more-people improve-the-relationships-i-have-with-others information know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life rediscover-who-i-am spend-time-thinking-about-what-is-important-to-me spend-time-with-people-who-have-experienced-the-same-things support-from-someone-with-similar-experiences support-in-person"]},
-    {"service":"Community Mental Health and Wellbeing Service", "location":["West Lothian"], "age":"55-1000", "gender":"any", "tags":["mix deal-with-stress-better feel-more-at-home-in-my-local-community feel-more-connected-and-get-out-and-about find-out-what's-going-on-where-i-live get-well-and-stay-well information know-about-more-things-to-do-to-find-meaning-and-purpose-in-my-life know-what-support,-tools-and-guides-are-available-that-will-help-me-manage-better make-changes-in-my-life support-in-person talk-to-someone-who-will-listen west-lothian"]},
-    {"service":"Wellbeing College", "location":["Scottish Borders"], "age":"16-1000", "gender":"any", "tags":["mix scottish-borders"]},
-    {"service":"The Listening Space", "location":["South East Edinburgh"], "age":"0-1000", "gender":"any", "tags":["mix edinburgh"]},
-    {"service":"My Assets and Personal Strengths (MAPS)", "location":["Edinburgh"], "age":"0-1000", "gender":"any", "tags":["mix edinburgh"]},
-    {"service":"Peer Collaborative", "location":["Edinburgh"], "age":"0-1000", "gender":"any", "tags":["mix edinburgh"]},
-    {"service":"Oasis", "location":["South East Edinburgh"], "age":"18-1000", "gender":"female", "tags":["mix"]}
-]}
+{
+  "services": [
+    {
+      "service": "Befriending",
+      "location": [
+        "Scottish Borders",
+        "Edinburgh",
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "counselling",
+        "depression",
+        "connect",
+        "discover"
+      ]
+    },
+    {
+      "service": "Community Navigator",
+      "location": [
+        "South West Edinburgh",
+        "South East Edinburgh"
+      ],
+      "age": "65-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Men's SHARE",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "25-50",
+      "gender": "male",
+      "tags": [
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "counselling",
+        "groupCounselling"
+      ]
+    },
+    {
+      "service": "Art Psychotherapy",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety"
+      ]
+    },
+    {
+      "service": "ROWAN, Respect Our Woodland and Nature",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "groupCounselling"
+      ]
+    },
+    {
+      "service": "South West Edinburgh",
+      "location": [
+        "South West Edinburgh"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "Support from Home",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "anxiety",
+        "depression",
+        "connect",
+        "anxiety",
+        "discover",
+        "discover",
+        "depression",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Equal Access, supporting people from minority and ethnic communities",
+      "location": [
+        "East Lothian",
+        "Edinburgh",
+        "Midlothian"
+      ],
+      "age": "16-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "groupCounselling"
+      ]
+    },
+    {
+      "service": "CLEAR, Community Lived Experience for Alcohol and Drugs Recovery",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "18-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "discover",
+        "connect",
+        "counselling",
+        "groupCounselling"
+      ]
+    },
+    {
+      "service": "Guided Self-Help",
+      "location": [
+        "Edinburgh",
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "connect",
+        "counselling"
+      ]
+    },
+    {
+      "service": "South Queensferry Developments",
+      "location": [
+        "South Queensferry"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "Counselling",
+      "location": [],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "trauma",
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Trauma Support Services",
+      "location": [],
+      "age": "16-1000",
+      "gender": "any",
+      "tags": [
+        "trauma",
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Trauma Counselling Line Scotland",
+      "location": [],
+      "age": "16-1000",
+      "gender": "any",
+      "tags": [
+        "trauma",
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Information Websites",
+      "location": [
+        "East Lothian",
+        "Edinburgh",
+        "Midlothian",
+        "West Lothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "discover",
+        "depression",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Day Service",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "connect",
+        "discover",
+        "groupCounselling",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Early Intervention and Crisis Response Service",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Out of Hours Service",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "Wellbeing Access Point",
+      "location": [
+        "Midlothian"
+      ],
+      "age": "18-65",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "depression",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Anxiety and Depression Support Groups",
+      "location": [
+        "East Lothian",
+        "Edinburgh",
+        "Midlothian",
+        "West Lothian"
+      ],
+      "age": "16-1000",
+      "gender": "any",
+      "tags": [
+        "depression",
+        "discover",
+        "groupCounselling"
+      ]
+    },
+    {
+      "service": "Wellbeing Gateway",
+      "location": [
+        "South West Edinburgh"
+      ],
+      "age": "18-64",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "connect",
+        "discover",
+        "depression",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Community Mental Health and Wellbeing Service",
+      "location": [
+        "West Lothian"
+      ],
+      "age": "55-1000",
+      "gender": "any",
+      "tags": [
+        "anxiety",
+        "connect",
+        "depression",
+        "discover",
+        "counselling"
+      ]
+    },
+    {
+      "service": "Wellbeing College",
+      "location": [
+        "Scottish Borders"
+      ],
+      "age": "16-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "The Listening Space",
+      "location": [
+        "South East Edinburgh"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "My Assets and Personal Strengths (MAPS)",
+      "location": [
+        "Edinburgh"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "Peer Collaborative",
+      "location": [
+        "Edinburgh"
+      ],
+      "age": "0-1000",
+      "gender": "any",
+      "tags": []
+    },
+    {
+      "service": "Oasis",
+      "location": [
+        "South East Edinburgh"
+      ],
+      "age": "18-1000",
+      "gender": "female",
+      "tags": []
+    }
+  ]
+}

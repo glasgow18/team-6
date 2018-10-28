@@ -5,16 +5,18 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class LoadServices {
-
-    public static void main(String[] args) throws IOException, ParseException {
+    public static List<HealthService> getHealthServices() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
         FileReader fileReader = new FileReader("/src/main/resources/services.txt");
         JSONObject json = (JSONObject) parser.parse(fileReader);
         JSONArray services = (JSONArray) json.get("services");
+        List<HealthService> hs = new ArrayList<>();
         for (Object service : services) {
             JSONObject serviceInstance = (JSONObject) parser.parse(service.toString());
             String name = serviceInstance.get("service").toString(); //breakdown location
@@ -35,8 +37,8 @@ public class LoadServices {
 
             String gender = serviceInstance.get("gender").toString();
 
-
-            new HealthService(name, locations, min, max, gender, tags, "dummyLink");
+            hs.add(new HealthService(name, locations, min, max, gender, tags, "dummyLink"));
         }
+        return hs;
     }
 }
