@@ -12,13 +12,13 @@ public class LoadServices {
 
     public static void main(String[] args) throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        FileReader fileReader = new FileReader("src/main/resources/services.txt");
+        FileReader fileReader = new FileReader("/src/main/resources/services.txt");
         JSONObject json = (JSONObject) parser.parse(fileReader);
         JSONArray services = (JSONArray) json.get("services");
         for (Object service : services) {
             JSONObject serviceInstance = (JSONObject) parser.parse(service.toString());
             String name = serviceInstance.get("service").toString(); //breakdown location
-            HashSet<String> locations = new HashSet<String>();
+            HashSet<String> locations = new HashSet<>();
 
             for (Object location : (JSONArray) serviceInstance.get("location")) {
                 locations.add(location.toString());
@@ -28,7 +28,15 @@ public class LoadServices {
             int min = Integer.parseInt(st.nextToken());
             int max = Integer.parseInt(st.nextToken());
 
-            String tags = serviceInstance.get("tags").toString();
+            HashSet<String> tags = new HashSet<>();
+            for (Object tag : (JSONArray) serviceInstance.get("tags")) {
+                tags.add(tag.toString());
+            }
+
+            String gender = serviceInstance.get("gender").toString();
+
+
+            new HealthService(name, locations, min, max, gender, tags, "dummyLink");
         }
     }
 }

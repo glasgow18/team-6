@@ -1,6 +1,7 @@
 import javafx.util.Pair;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ public class HealthService {
     private String gender;
     private String serviceLink;
 
-    public HealthService(String name, Set<String> locations, int minAge, int maxAge, String gender, String site) {
+    public HealthService(String name, Set<String> locations, int minAge, int maxAge, String gender, HashSet<String> tags, String site) {
         this.serviceName = name;
         this.locations = locations;
         this.minAge = minAge;
