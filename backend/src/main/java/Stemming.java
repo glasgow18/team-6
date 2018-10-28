@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class Stemming {
-    public static List<String> getStems(String sentence){
+   public static List<String> getStems(String sentence){
         Sentence s = new Sentence(sentence.toLowerCase());
         List<String> lemmas = s.lemmas();
         HashSet<String> stopWords = new HashSet<>();
