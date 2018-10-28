@@ -1,6 +1,3 @@
-import org.json.simple.parser.ParseException;
-
-import java.io.IOException;
 import java.util.*;
 
 public class ChatBot {
@@ -71,45 +68,63 @@ public class ChatBot {
 
     // Parse through the intent of the message by breaking down keywords
     public String poll(String input) {
+        List<String> tokens = getTokenKeywords(input);
         switch (pointer) {
             case 0:
-                // break down around words like is, called, i'm, am
-                // check crisis words
-                String personName = input; //(does not filter surrounding words atm)
+                String personName = input;
                 person.setName(input);
                 pointer++;
                 break;
             case 1:
-                //check crisis words
-                // call
-                // break down into tokens, synonym every one, check if they havve synoynms of target word
-                List<String> tokens = getTokenKeywords(input);
+
                 if (tokens.size() > 0) {
                     person.setTags(tokens);
                     pointer++;
                 }
 
-                if (tokens.contains("suicide")) {
-                    //call crisis
+                if (tokens.contains("suicide")) {   // move to check
+                    pointer = 4;
                 }
 
                 break;
             case 2:
                 //check crisis words
                 // break down around ii'm, am, or just get the numbers
-                person.setAge(0);
-                // if age is under 16 refer and terminal, else retun to case 1
-                //increment pointer
+                int age=-1;
+                for(String s: tokens){
+                    StringBuilder sb = new StringBuilder();
+                    boolean flag = false;
+                    if (s != null && !s.isEmpty()) {
+                        for (char c : s.toCharArray()) {
+                            if (Character.isDigit(c)) {
+                                sb.append(c);
+                                flag = true;
+                            } else if (flag) {
+                                break;
+                            }
+                        }
+                    }
+                    if(flag){
+                        age = Integer.valueOf(sb.toString());
+                        break;
+                    }
+                }
+                if(age >0 && age<1000){
+                    person.setAge(age);
+                    pointer++;
+                }
+                // else send same message again
                 break;
             case 3:
-                //check crisis words
-                // search for words
-                person.setLocation(input);
+                String loc = "";
+                for(String s: tokens){
+                    loc = loc + s + " ";
+                }
+                person.setLocation(loc);
+                pointer++;
                 // terminal. point. display relevant things, maybe only 3 at a time possibly another case to show more queries
                 break;
-
         }
-        pointer++;
         return buildReply();
     }
 
@@ -144,13 +159,9 @@ public class ChatBot {
     }
 
 
-    public void crisis() {
-        // message linking to samaritans.
-        //what do with pointer
-    }
 
 
     public static void main(String[] args) {
-new ChatBot("a");
+        new ChatBot("a");
     }
 }
