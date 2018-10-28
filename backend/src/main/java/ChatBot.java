@@ -7,14 +7,14 @@ import java.util.StringTokenizer;
 
 enum ServiceTags {
     ANXIETY, DEPRESSION, CONNECT, DISCOVER,
-    COUNSELLING, GROUPCOUNSELLING, TRAUMA
+    COUNSELLING, GROUPCOUNSELLING, TRAUMA, SUICIDE
 }
 
 public class ChatBot {
     private Person person;
     private List<HealthService> hsList;
     private int pointer;
-    private List<State> states;
+    //    private List<State> states;
     private String reply;
     private List<HealthService> relevantHS;
     private String name;
@@ -35,6 +35,16 @@ public class ChatBot {
         int age;
         String location;
 
+        public List<ServiceTags> getTags() {
+            return tags;
+        }
+
+        public void setTags(List<ServiceTags> tags) {
+            this.tags = tags;
+        }
+
+        List<ServiceTags> tags;
+
         public String getName() {
             return name;
         }
@@ -47,8 +57,8 @@ public class ChatBot {
             return age;
         }
 
-        public void setAge(String input) {
-//            this.age = getIntFromString(input);
+        public void setAge(int age) {
+//            this.age = age;
         }
 
         public String getLocation() {
@@ -73,14 +83,23 @@ public class ChatBot {
                 break;
             case 1:
                 //check crisis words
+                // call
                 // break down into tokens, synonym every one, check if they havve synoynms of target word
-                checkProblem(input);
-                //incremet poiinter
+                List<ServiceTags> tokens = getTokenKeywords(input);
+                if (tokens.size() > 0) {
+                    pointer++;
+                }
+
+                if (tokens.contains(ServiceTags.SUICIDE)) {
+                    //call crisis
+                }
+//                checkProblem(input);
+
                 break;
             case 2:
                 //check crisis words
                 // break down around ii'm, am, or just get the numbers
-                person.setAge(input);
+                person.setAge(0);
                 // if age is under 16 refer and terminal, else retun to case 1
                 //increment pointer
                 break;
@@ -109,29 +128,19 @@ public class ChatBot {
 
     }
 
-    private List<String> getTokenKeywords(String input) {
+    private List<ServiceTags> getTokenKeywords(String input) {
 
         // tokenise
         //call synonym for all of themm.
         // cross check to key words
 //call STEMMER
-        return null;
+        ArrayList<ServiceTags> tags = new ArrayList<>();
+        return tags;
     }
 
 
-    public void checkCrisis(int type) {
-        String key;
-        switch (type) {
-            case 1:
-                key = "suicide";
-                break;
-        }
-        for (HealthService hs : hsList) {
-//            for(Tag t: hs.getTags){
-//                if(t.contains(key)){
-//                    relevantHS.add(hs);
-//                }
-//            }
-        }
+    public void crisis() {
+        //
     }
+
 }
