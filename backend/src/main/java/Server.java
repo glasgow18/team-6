@@ -36,7 +36,6 @@ public class Server {
     public static void sendMsgWithReply(Session sender, String msg){
         try{
             if(!msg.equals(null)) {
-                List<String> r = Stemming.getStems(msg);
 //                String reply = botMap.get(sender).poll(msg);
                 String reply = "reply";
                 JSONObject json = new JSONObject();
