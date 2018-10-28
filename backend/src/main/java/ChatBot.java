@@ -9,14 +9,14 @@ public class ChatBot {
     private int pointer;
     //    private List<State> states;
     private String reply;
-    private Set<HealthService> relevantHS;
     private String name;
     private Set<String> keywords;
 
     public ChatBot(String name) {
         this.name = name;
         person = new Person();
-        relevantHS = new HashSet<>();
+
+
         try {
             hsList = LoadServices.getHealthServices();
             keywords = LoadServices.getTags();
@@ -162,8 +162,28 @@ public class ChatBot {
             }
         }
         if(pointer == 4){
-            //search query
-            return "something";
+
+            Set<HealthService> healthServiceList = new HashSet<>();
+            for (HealthService healthService : hsList) {
+                if(person.getAge() < healthService.getMinAge() || person.getAge() > healthService.getMaxAge())
+                    continue;
+                if(!healthServiceList.contains(person.getLocation()))
+                    continue;
+                for(String tags: person.getTags()){
+                    if(healthService.getTags().contains(tags)){
+                        healthServiceList.add(healthService);
+                        break;
+                    }
+                }
+            }
+
+            String out = "";
+            for(HealthService hs: healthServiceList)
+                out = out.concat(hs.getServiceName() + "\n");
+
+
+
+            return out;
         }
         return "oops";
     }
@@ -187,8 +207,7 @@ public class ChatBot {
         //call synonym for all of themm.
         // cross check to key words
 //call STEMMER
-        ArrayList<String> tags = new ArrayList<>();
-        return tags;
+        return synonyms;
     }
 
 
