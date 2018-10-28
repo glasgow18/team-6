@@ -1,10 +1,7 @@
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class ChatBot {
     private Person person;
@@ -12,14 +9,14 @@ public class ChatBot {
     private int pointer;
     //    private List<State> states;
     private String reply;
-    private List<HealthService> relevantHS;
+    private Set<HealthService> relevantHS;
     private String name;
-    private List<String> keywords;
+    private Set<String> keywords;
 
     public ChatBot(String name) {
         this.name = name;
         person = new Person();
-        relevantHS = new ArrayList<>();
+        relevantHS = new HashSet<>();
         try {
             hsList = LoadServices.getHealthServices();
             keywords = LoadServices.getTags();
