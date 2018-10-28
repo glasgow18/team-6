@@ -37,4 +37,12 @@ public class Server {
             e.printStackTrace();
         }
     }
+
+    public static void sendWelcomeMessage(Session sender) {
+        try{
+            sender.getRemote().sendString(String.valueOf(new JSONObject().put("reply", "Hi there, how can I help you?")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
