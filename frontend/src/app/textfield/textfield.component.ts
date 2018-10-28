@@ -18,13 +18,13 @@ export class TextfieldComponent implements OnInit {
     }
 
     sendMessage(): void {
-        if (this.textValue !== '') {
+        if (this.textValue.trim() !== '') {
             const message: Message = {
                 type: 1,
                 message: this.textValue
             };
             this.messageService.send(message);  // TODO: change to message class
-            this.textValue = '';
         }
+        this.textValue = '';
     }
 }

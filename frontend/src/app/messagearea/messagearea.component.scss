@@ -35,18 +35,20 @@
         }
       }
 
-      .message {
-        border-radius: 0.5rem;
-      }
     }
 
     .userMessage {
 
       display: flex;
-      flex-direction: row-reverse;
+
+      .spacer {
+        flex-grow: 2;
+      }
 
       .message {
-        width: 45%;
+        max-width: 45%;
+        overflow-wrap: break-word;
+        white-space: pre-line;
       }
     }
 
