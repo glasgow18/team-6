@@ -1,33 +1,66 @@
-import { Injectable } from '@angular/core';
-import {observable, Observable} from 'rxjs';
-import { Observer } from 'rxjs';
+import {Injectable} from '@angular/core';
 
-import * as socketIo from 'socket.io-client';
-import {Message} from './message';
-
-const SERVER_URL = 'http://localhost:4567';
+const SERVER_URL = 'ws://localhost:4567/chat';
 
 @Injectable({
     providedIn: 'root'
 })
 export class WebsocketService {
 
-    private socket;
+    // private webSocket;
+    //
+    // constructor() {
+    //
+    // }
+    //
+    // public connect() {
+    //     this.webSocket = new WebSocket(SERVER_URL);
+    //
+    //     this.webSocket.onmessage = (msg => this.updateChat(msg));
+    // }
+    //
+    // public updateChat(msg) {
+    //
+    // }
 
-    constructor() {
-    }
 
-    public connect(): void {
-        this.socket = socketIo(SERVER_URL);
-    }
-
-    public send(message: string): void {
-        this.socket.emit('message', message);
-    }
-
-    public onMessage(){
-        this.socket.on('message', function(data) {
-            console.log('Got message from server ' + data);
-        });
-    }
+    // public connect(url): Subject<MessageEvent> {
+    //     if (!this.subject) {
+    //         this.subject = this.subject(url);
+    //         console.log('Successfuly connected: ' + url);
+    //     }
+    //     return this.subject;
+    // }
+    //
+    // private create(url): Subject<MessageEvent> {
+    //     const ws = new WebSocket(url);
+    //
+    //     const observable = Observable.create(
+    //         (obs: Observer<MessageEvent>) => {
+    //             ws.onmessage = obs.next.bind(obs);
+    //             ws.onerror = obs.error.bind(obs);
+    //             ws.onclose = obs.complete.bind(obs);
+    //             return ws.close.bind(ws);
+    //         });
+    //
+    //     const observer = {
+    //         next: (data: Object) => {
+    //             if (ws.readyState === WebSocket.OPEN) {
+    //                 ws.send(JSON.stringify(data));
+    //             }
+    //         }
+    //     };
+    //
+    //     return Subject.create(observer, observable);
+    // }
+    //
+    // public send(message: string): void {
+    //     this.socket.emit('message', message);
+    // }
+    //
+    // public onMessage() {
+    //     this.socket.on('message', function(data) {
+    //         console.log('Got message from server ' + data);
+    //     });
+    // }
 }

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MessageService} from '../message.service';
 import {WebsocketService} from '../websocket.service';
-import {Message} from '../message';
 
 @Component({
     selector: 'app-messagearea',
@@ -9,16 +8,10 @@ import {Message} from '../message';
     styleUrls: ['./messagearea.component.scss']
 })
 export class MessageareaComponent implements OnInit {
-    constructor(public  messageService: MessageService, private socketService: WebsocketService) {
+    constructor(public  messageService: MessageService) {
     }
 
     ngOnInit() {
-        this.connect();
-    }
-
-    private connect() {
-        this.socketService.connect();
-        this.socketService.send('hello');
-        this.socketService.onMessage();
+        this.messageService.connect();
     }
 }
