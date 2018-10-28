@@ -17,10 +17,10 @@
       margin-bottom: 1rem;
 
       .message {
-        background: $maincolor;
+        background: #FFDFB4;
         border-radius: 0.7rem;
         padding: 1rem;
-        color: #ffffff;
+        color: black;
         font-size: 1.2rem;
       }
 
@@ -49,6 +49,8 @@
         }
 
         .message {
+          background: $maincolor;
+          color: white;
           max-width: 45%;
           overflow-wrap: break-word;
           white-space: pre-line;

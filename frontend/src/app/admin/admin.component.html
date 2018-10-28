@@ -13,7 +13,7 @@
             <th>Tags</th>
         </tr>
         <tr *ngFor="let service of adminService.services; let id = index">
-            <td #nameTD contenteditable="true" (blur)="adminService.updateService(id, 'name', nameTD.innerHTML)">{{service.name}}</td>
+            <td #nameTD contenteditable="true" (blur)="adminService.updateService(id, 'service', nameTD.innerHTML)">{{service.name}}</td>
             <td #locationTD contenteditable="true" (blur)="adminService.updateService(id, 'location', locationTD.innerHTML)">{{service.locations}}</td>
             <td #ageTD contenteditable="true" (blur)="adminService.updateService(id, 'age', ageTD.innerHTML)">{{service.age}}</td>
             <td #genderTD contenteditable="true" (blur)="adminService.updateService(id, 'gender', genderTD.innerHTML)">{{service.gender}}</td>

@@ -2,12 +2,15 @@ package admin;
 
 import com.codesnippets4all.json.serializers.JsonSerializer;
 import org.eclipse.jetty.websocket.api.Session;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -27,7 +30,7 @@ public class AdminServer {
 //            JSONParser parser = new JSONParser();
 
 //            FileReader fileReader = new FileReader("backend/src/main/resources/services.txt");
-            json = new JSONObject(new String(Files.readAllBytes(Paths.get("backend/src/main/resources/services.txt"))));
+            json = new JSONObject(new String(Files.readAllBytes(Paths.get("backend/src/main/java/admin/services.txt"))));
 
             System.out.println("initial json " + json);
 
@@ -41,19 +44,37 @@ public class AdminServer {
     public static void updateFile(Session user, String msg) {
 
         JSONParser parser = new JSONParser();
+
+            JSONObject message = new JSONObject(msg);
+        System.out.println("message: " + message.get("id"));
+
+            JSONArray services = json.getJSONArray("services");
+
+        for (Object service : services) {
+            String id = ((JSONObject)service).getString("id");
+            System.out.println(message.get("id") + " " + id);
+
+            if (id.equals(message.get("id").toString())) {
+                ((JSONObject) service).put(message.getString("name"), message.getString("value"));
+                System.out.println(services);
+            }
+        }
+
         try {
-
-            JSONObject message = (JSONObject) parser.parse(msg);
-
-            JSONObject services = json.getJSONObject("services");
-
-            services.getJSONObject(message.getJSONObject("id").toString()).put(message.getJSONObject("name").toString(), message.getJSONObject("value"));
-
-            System.out.println(json.get("services"));
-
-        } catch (ParseException e) {
+            PrintWriter printWriter = new PrintWriter("backend/src/main/java/admin/services.txt");
+            printWriter.write("{\"services\":" + services + "}");
+//            fileWriter.write("Hi");
+            printWriter.close();
+            System.out.println("Wrote");
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+//            services.getJSONObject(message.getJSONObject("id")).put(message.getJSONObject("name").toString(), message.getJSONObject("value"));
+//
+//            System.out.println(json.get("services"));
+
+
 
     }
 //    public static void sendMessage(Session sender, String msg){
