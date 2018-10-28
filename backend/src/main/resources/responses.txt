@@ -23,4 +23,6 @@
       "You might find the following things useful:",
       "take a look here"
    ]
+
+   "depression":
 }

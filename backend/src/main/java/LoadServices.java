@@ -3,6 +3,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -53,5 +54,13 @@ public class LoadServices {
 
         }
         return tags;
+    }
+
+    public static String getResponse(String responeName) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("backend/src/main/resources/responses.txt");
+        JSONObject json = (JSONObject) parser.parse(fileReader);
+        JSONArray services = (JSONArray) json.get(responeName);
+        return services.get(0).toString();
     }
 }

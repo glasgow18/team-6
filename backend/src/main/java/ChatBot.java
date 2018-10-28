@@ -1,3 +1,6 @@
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 import java.util.*;
 
 public class ChatBot {
@@ -129,8 +132,40 @@ public class ChatBot {
     }
 
     private String buildReply() {
+        String response;
+        if(pointer == 1){
+            //problemFind
+            try {
+                response = LoadServices.getResponse("problemFind");
+                return response;
+            } catch (IOException | ParseException e) {
+                e.printStackTrace();
+            }
 
-        return "";
+        }
+        if(pointer == 2){
+            //ageRequest
+            try {
+                response = LoadServices.getResponse("ageRequest");
+                return response;
+            } catch (IOException | ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        if(pointer == 3){
+            //locationRequest
+            try {
+                response = LoadServices.getResponse("locationRequest");
+                return response;
+            } catch (IOException | ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        if(pointer == 4){
+            //search query
+            return "something";
+        }
+        return "oops";
     }
 
 
@@ -147,9 +182,7 @@ public class ChatBot {
         for (String s : stemmed) {
             synonyms.addAll(Synonym.findSynonym(s));
         }
-        if (synonyms.contains("sad")) {
-            System.out.println("u sad");
-        }
+
         // tokenise
         //call synonym for all of themm.
         // cross check to key words
