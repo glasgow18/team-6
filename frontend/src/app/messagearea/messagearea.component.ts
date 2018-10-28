@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MessageService} from '../message.service';
+import {WebsocketService} from '../websocket.service';
 
 @Component({
     selector: 'app-messagearea',
@@ -11,5 +12,6 @@ export class MessageareaComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.messageService.connect();
     }
 }

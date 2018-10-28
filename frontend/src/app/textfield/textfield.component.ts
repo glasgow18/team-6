@@ -23,7 +23,7 @@ export class TextfieldComponent implements OnInit {
                 type: 1,
                 message: this.textValue
             };
-            this.messageService.add(message);  // TODO: change to message class
+            this.messageService.send(message);  // TODO: change to message class
             this.textValue = '';
         }
     }
