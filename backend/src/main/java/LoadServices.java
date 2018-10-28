@@ -62,6 +62,10 @@ public class LoadServices {
         FileReader fileReader = new FileReader("backend/src/main/resources/responses.txt");
         JSONObject json = (JSONObject) parser.parse(fileReader);
         JSONArray services = (JSONArray) json.get(responeName);
-        return services.get(0).toString();
+        Random rng = new Random();
+        if(rng.nextBoolean())
+            return services.get(0).toString();
+        else
+            return services.get(1).toString();
     }
 }
