@@ -16,7 +16,10 @@ public class HealthService {
 
     public HealthService(String name, Set<String> locations, int minAge, int maxAge, String gender, HashSet<String> tags, String site) {
         this.serviceName = name;
-        this.locations = locations;
+        this.locations = new HashSet<>();
+        for (String location : locations) {
+            this.locations.add(location.toLowerCase());
+        }
         this.minAge = minAge;
         this.maxAge = maxAge;
         this.gender = gender;

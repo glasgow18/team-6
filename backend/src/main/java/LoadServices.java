@@ -16,6 +16,7 @@ public class LoadServices {
         JSONArray services = (JSONArray) json.get("services");
         List<HealthService> hs = new ArrayList<>();
         for (Object service : services) {
+//            parser.parse(service.toString());
             JSONObject serviceInstance = (JSONObject) parser.parse(service.toString());
             String name = serviceInstance.get("service").toString(); //breakdown location
             HashSet<String> locations = new HashSet<>();

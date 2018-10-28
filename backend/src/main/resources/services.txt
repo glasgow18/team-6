@@ -1,6 +1,6 @@
 {
   "services": [
-    "0"{
+    {
       "service": "Befriending",
       "location": [
         "Scottish Borders",
@@ -17,7 +17,7 @@
         "discover"
       ]
     },
-    "1"{
+    {
       "service": "Community Navigator",
       "location": [
         "South West Edinburgh",
@@ -32,7 +32,7 @@
         "counselling"
       ]
     },
-    "2"{
+    {
       "service": "Men's SHARE",
       "location": [
         "Midlothian"
@@ -48,7 +48,7 @@
         "group"
       ]
     },
-    "3"{
+    {
       "service": "Art Psychotherapy",
       "location": [
         "Midlothian"
@@ -59,7 +59,7 @@
         "anxiety"
       ]
     },
-    "4"{
+    {
       "service": "ROWAN, Respect Our Woodland and Nature",
       "location": [
         "Midlothian"
@@ -74,7 +74,7 @@
         "group"
       ]
     },
-    "5"{
+    {
       "service": "South West Edinburgh",
       "location": [
         "South West Edinburgh"
@@ -83,7 +83,7 @@
       "gender": "any",
       "tags": []
     },
-    "6"{
+    {
       "service": "Support from Home",
       "location": [
         "Midlothian"
@@ -99,7 +99,7 @@
         "counselling"
       ]
     },
-    "7"{
+    {
       "service": "Equal Access, supporting people from minority and ethnic communities",
       "location": [
         "East Lothian",
@@ -116,7 +116,7 @@
         "group"
       ]
     },
-    "8"{
+    {
       "service": "CLEAR, Community Lived Experience for Alcohol and Drugs Recovery",
       "location": [
         "Midlothian"
@@ -132,7 +132,7 @@
         "group"
       ]
     },
-    "9"{
+    {
       "service": "Guided Self-Help",
       "location": [
         "Edinburgh",
@@ -147,7 +147,7 @@
         "counselling"
       ]
     },
-    "10"{
+    {
       "service": "South Queensferry Developments",
       "location": [
         "South Queensferry"
@@ -156,7 +156,7 @@
       "gender": "any",
       "tags": []
     },
-    "11"{
+    {
       "service": "Counselling",
       "location": [],
       "age": "0-1000",
@@ -170,7 +170,7 @@
         "counselling"
       ]
     },
-    "12"{
+    {
       "service": "Trauma Support Services",
       "location": [],
       "age": "16-1000",
@@ -184,7 +184,7 @@
         "counselling"
       ]
     },
-    "13"{
+    {
       "service": "Trauma Counselling Line Scotland",
       "location": [],
       "age": "16-1000",
@@ -198,7 +198,7 @@
         "counselling"
       ]
     },
-    "14"{
+    {
       "service": "Information Websites",
       "location": [
         "East Lothian",
@@ -216,7 +216,7 @@
         "counselling"
       ]
     },
-    "15"{
+    {
       "service": "Day Service",
       "location": [
         "Midlothian"
@@ -232,7 +232,7 @@
         "counselling"
       ]
     },
-    "16"{
+    {
       "service": "Early Intervention and Crisis Response Service",
       "location": [
         "Midlothian"
@@ -245,7 +245,7 @@
         "counselling"
       ]
     },
-    "17"{
+    {
       "service": "Out of Hours Service",
       "location": [
         "Midlothian"
@@ -254,7 +254,7 @@
       "gender": "any",
       "tags": []
     },
-    "18"{
+    {
       "service": "Wellbeing Access Point",
       "location": [
         "Midlothian"
@@ -268,7 +268,7 @@
         "counselling"
       ]
     },
-    "19"{
+    {
       "service": "Anxiety and Depression Support Groups",
       "location": [
         "East Lothian",
@@ -284,7 +284,7 @@
         "group"
       ]
     },
-    "20"{
+    {
       "service": "Wellbeing Gateway",
       "location": [
         "South West Edinburgh"
@@ -299,7 +299,7 @@
         "counselling"
       ]
     },
-    "21"{
+    {
       "service": "Community Mental Health and Wellbeing Service",
       "location": [
         "West Lothian"
@@ -314,7 +314,7 @@
         "counselling"
       ]
     },
-    "22"{
+    {
       "service": "Wellbeing College",
       "location": [
         "Scottish Borders"
@@ -323,7 +323,7 @@
       "gender": "any",
       "tags": []
     },
-    "23"{
+    {
       "service": "The Listening Space",
       "location": [
         "South East Edinburgh"
@@ -332,7 +332,7 @@
       "gender": "any",
       "tags": []
     },
-    "24"{
+    {
       "service": "My Assets and Personal Strengths (MAPS)",
       "location": [
         "Edinburgh"
@@ -341,7 +341,7 @@
       "gender": "any",
       "tags": []
     },
-    "25"{
+    {
       "service": "Peer Collaborative",
       "location": [
         "Edinburgh"
@@ -350,7 +350,7 @@
       "gender": "any",
       "tags": []
     },
-    "26"{
+    {
       "service": "Oasis",
       "location": [
         "South East Edinburgh"

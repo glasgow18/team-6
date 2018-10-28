@@ -13,12 +13,15 @@ public class Synonym {
         String[] synonyms = new JSONParse().parseWords(jparser);
         System.out.println(Arrays.toString(synonyms));
         String sentenceString = "";
-        for (String synonym : synonyms) {
-            sentenceString = sentenceString.concat(synonym + " ");
+        if (synonyms.length > 0) {
+            for (String synonym : synonyms) {
+                sentenceString = sentenceString.concat(synonym + " ");
+            }
         }
         Sentence sentence = new Sentence(sentenceString);
         ArrayList<String> keywords = new ArrayList<>(sentence.lemmas());
         keywords.add(keyword);
+        System.out.println("keywords:" + keywords);
         return keywords;
 
     }

@@ -1,16 +1,18 @@
-<div class="messageRow" *ngFor="let message of messageService.messages">
+<div #scrollMe id="messageArea">
+    <div class="messageRow" *ngFor="let message of messageService.messages">
 
-    <div *ngIf="message.type === 0" class="serverMessage">
-        <div class="panda"><img src="../../assets/panda.png"></div>
-        <div class="message">
-            {{message.message}}
+        <div *ngIf="message.type === 0" class="serverMessage">
+            <div class="panda"><img src="../../assets/panda.png"></div>
+            <div class="message">
+                {{message.message}}
+            </div>
         </div>
-    </div>
-    <div *ngIf="message.type === 1" class="userMessage">
-        <div class="spacer"></div>
-        <div class="message">
-            {{message.message}}
+        <div *ngIf="message.type === 1" class="userMessage">
+            <div class="spacer"></div>
+            <div class="message">
+                {{message.message}}
+            </div>
         </div>
-    </div>
 
+    </div>
 </div>

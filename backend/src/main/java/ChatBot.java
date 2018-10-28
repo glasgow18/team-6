@@ -19,13 +19,13 @@ public class ChatBot {
 
         try {
             hsList = LoadServices.getHealthServices();
-            keywords = LoadServices.getTags();
+//            keywords = LoadServices.getTags();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        for (String s : keywords) {
-            System.out.println(s);
-        }
+//        for (String s : keywords) {
+//            System.out.println(s);
+//        }
     }
 
     private class Person {
@@ -74,7 +74,6 @@ public class ChatBot {
         List<String> tokens = getTokenKeywords(input);
         switch (pointer) {
             case 0:
-                String personName = input;
                 person.setName(input);
                 pointer++;
                 break;
@@ -120,10 +119,16 @@ public class ChatBot {
                 break;
             case 3:
                 String loc = "";
+//                System.out.println("tokens at 3: " + tokens);
                 for(String s: tokens){
-                    loc = loc + s + " ";
+                    loc = loc + s;
+                    if(tokens.size()>1){
+                        loc= loc+" ";
+                    }
                 }
-                person.setLocation(loc);
+                System.out.println("loc at 3: " + loc);
+                person.setLocation(input);
+                System.out.println(person.getLocation());
                 pointer++;
                 // terminal. point. display relevant things, maybe only 3 at a time possibly another case to show more queries
                 break;
@@ -136,7 +141,7 @@ public class ChatBot {
         if(pointer == 1){
             //problemFind
             try {
-                response = LoadServices.getResponse("problemFind");
+                response = LoadServices.getResponse("problemRequest");
                 return response;
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
@@ -167,7 +172,7 @@ public class ChatBot {
             for (HealthService healthService : hsList) {
                 if(person.getAge() < healthService.getMinAge() || person.getAge() > healthService.getMaxAge())
                     continue;
-                if(!healthServiceList.contains(person.getLocation()))
+                if(!healthService.getLocations().contains(person.getLocation().toLowerCase()))
                     continue;
                 for(String tags: person.getTags()){
                     if(healthService.getTags().contains(tags)){
@@ -182,7 +187,8 @@ public class ChatBot {
                 out = out.concat(hs.getServiceName() + "\n");
 
 
-
+            System.out.println(healthServiceList);
+            System.out.println(out);
             return out;
         }
         return "oops";
