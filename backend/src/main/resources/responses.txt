@@ -1,11 +1,7 @@
 {
-   "greetings":[
-      "hi. give name",
-      "hey. give name"
-   ],
    "nameRequest":[
-      "hmm, what to call you",
-      "what do i call you"
+      "Hi. hmm, what to call you",
+      "Hey. what do i call you"
    ],
    "ageRequest":[
       "how old are you, i need to figure out what services you can take, im not creepy",
@@ -15,8 +11,16 @@
       "where you from",
       "where u live"
    ],
-   "problemFind":[
+   "problemRequest":[
       "how are you",
       "whats up"
+   ],
+   "noProblem":[
+      "Hmm, I dont really know how to help. Please can you explain more",
+      "sorry, this is bad program. please re-explain problem"
+   ],
+   "foundProblem":[
+      "You might find the following things useful:",
+      "take a look here"
    ]
 }
