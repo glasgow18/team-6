@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -25,8 +26,9 @@ public class Server {
     public static void sendMsgWithReply(Session sender, String msg){
         try{
             if(!msg.equals(null)) {
+                List<String> r = Stemming.getStems(msg);
                 // String reply = chatBot.poll(msg, sender);
-                String reply = "reply";     //ToDo: Poll Chat bot
+                String reply = "reply";
                 JSONObject json = new JSONObject();
                 json.put("msg", msg);
                 json.put("reply", reply);
