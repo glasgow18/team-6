@@ -17,7 +17,7 @@ public class Stemming {
         List<String> lemmas = s.lemmas();
         HashSet<String> stopWords = new HashSet<>();
         sentence = "";
-        try (Stream<String> stream = Files.lines(Paths.get("backend/stopwords.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("backend/src/main/resources/stopwords.txt"))) {
             stream.forEach(stopWords::add);
             for (String lemma : lemmas) {
                 if (!stopWords.contains(lemma))
