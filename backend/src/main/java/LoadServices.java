@@ -12,7 +12,7 @@ public class LoadServices {
 
     public static void main(String[] args) throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        FileReader fileReader = new FileReader("/src/main/resources/services.txt");
+        FileReader fileReader = new FileReader("backend/src/main/resources/services.txt");
         JSONObject json = (JSONObject) parser.parse(fileReader);
         JSONArray services = (JSONArray) json.get("services");
         for (Object service : services) {
