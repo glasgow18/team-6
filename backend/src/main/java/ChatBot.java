@@ -86,7 +86,10 @@ public class ChatBot {
                 }
 
                 if (tokens.contains("suicide")) {   // move to check
-                    pointer = 4;
+                    pointer = 5;
+                    List<String> list = new ArrayList<>();
+                    list.add("suicide");
+                    person.setTags(list);
                 }
 
                 break;
@@ -160,8 +163,7 @@ public class ChatBot {
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
-        }
-        if(pointer == 4){
+        }else if(pointer == 4){
 
             Set<HealthService> healthServiceList = new HashSet<>();
             for (HealthService healthService : hsList) {
@@ -176,25 +178,23 @@ public class ChatBot {
                     }
                 }
             }
-
             String out = "";
             for(HealthService hs: healthServiceList)
                 out = out.concat(hs.getServiceName() + "\n");
-
-
-
             return out;
+
+        }else if(pointer == 5){
+            if(person.getTags().contains("suicide")){
+                return "Suicide Hotline";
+            }
+
+            return "Other Crisis Info";
         }
-        return "oops";
+        return "Sorry we can't help you with what you asked.";
     }
 
 
-//    public void                              checkProblem(String input) {
-//        String         s = checkSynonym(input);
-//        if prob                                                                                    lem == crisis
-//            checkCrisis(type);
 
-//    }
 
     private List<String> getTokenKeywords(String input) {
         List<String> stemmed = Stemming.getStems(input);
