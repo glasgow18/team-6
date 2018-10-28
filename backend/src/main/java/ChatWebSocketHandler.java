@@ -9,7 +9,7 @@ public class ChatWebSocketHandler {
 
     @OnWebSocketConnect
     public void onConnect(Session user){
-        Server.sendMessage(user, "You have connected");
+        Server.initConnection(user);
     }
 
     @OnWebSocketClose
