@@ -3,17 +3,15 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class LoadServices {
     public static List<HealthService> getHealthServices() throws IOException, ParseException {
         JSONParser parser = new JSONParser();
-        FileReader fileReader = new FileReader("/src/main/resources/services.txt");
+        FileReader fileReader = new FileReader("backend/src/main/resources/services.txt");
         JSONObject json = (JSONObject) parser.parse(fileReader);
         JSONArray services = (JSONArray) json.get("services");
         List<HealthService> hs = new ArrayList<>();
@@ -40,5 +38,29 @@ public class LoadServices {
             hs.add(new HealthService(name, locations, min, max, gender, tags, "dummyLink"));
         }
         return hs;
+    }
+
+    public static Set<String> getTags() throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("backend/src/main/resources/services.txt");
+        JSONObject json = (JSONObject) parser.parse(fileReader);
+        JSONArray services = (JSONArray) json.get("services");
+        Set<String> tags = new HashSet<>();
+        for (Object service : services) {
+            JSONObject serviceInstance = (JSONObject) parser.parse(service.toString());
+            for (Object tag : (JSONArray) serviceInstance.get("tags")) {
+                tags.add(tag.toString());
+            }
+
+        }
+        return tags;
+    }
+
+    public static String getResponse(String responeName) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("backend/src/main/resources/responses.txt");
+        JSONObject json = (JSONObject) parser.parse(fileReader);
+        JSONArray services = (JSONArray) json.get(responeName);
+        return services.get(0).toString();
     }
 }
