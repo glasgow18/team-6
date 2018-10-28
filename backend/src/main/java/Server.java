@@ -21,6 +21,7 @@ public class Server {
         botMap.put(sender, new ChatBot("BOT NAME HERE"));
         try{
             sender.getRemote().sendString(String.valueOf(new JSONObject().put("msg", "You have connected")));
+            sender.getRemote().sendString(String.valueOf(new JSONObject().put("reply", "Hi there, how can I help you?")));
         } catch (IOException e) {
             e.printStackTrace();
         }

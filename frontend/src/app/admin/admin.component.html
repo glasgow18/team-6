@@ -1,0 +1,32 @@
+<div id="adminContainer">
+    <app-header></app-header>
+
+    <h1>Chat Bot Admin Area</h1>
+
+
+    <table class="services">
+        <tr>
+            <th>Name</th>
+            <th>Locations</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Tags</th>
+        </tr>
+        <tr *ngFor="let service of services">
+            <td>{{service.name}}</td>
+            <td>{{service.locations}}</td>
+            <td>{{service.age}}</td>
+            <td>{{service.gender}}</td>
+            <td>{{service.tags}}</td>
+        </tr>
+    </table>
+
+    <!--<ul class="services">-->
+
+        <!--<li *ngFor="let service of services">-->
+            <!--{{service}}-->
+        <!--</li>-->
+
+    <!--</ul>-->
+
+</div>

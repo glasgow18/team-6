@@ -14,7 +14,6 @@ export class MessageService {
 
     add(message: Message) {
         this.messages.push(message);
-        console.log(message.message);
     }
 
     constructor() {
@@ -29,13 +28,14 @@ export class MessageService {
 
     public updateChat(msg) {
         const data = JSON.parse(msg.data);
+        if (data.reply !== undefined) {
+            const message: Message = {
+                type: 0,
+                message: data.reply
+            };
 
-        const message: Message = {
-            type: 0,
-            message: data.reply
-        };
-
-        this.add(message);
+            this.add(message);
+        }
     }
 
     public send(message: Message) {
